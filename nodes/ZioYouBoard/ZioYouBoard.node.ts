@@ -9,7 +9,7 @@ export class ZioYouBoard implements INodeType {
         group: ['transform'],
         version: 1,
         subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-        description: 'Get data from NASAs API',
+        description: '지오유 그룹웨어에서 게시방에 글을 접근하는 API입니다.',
         defaults: {
             name: 'ZioYou Board',
         },
@@ -64,7 +64,7 @@ export class ZioYouBoard implements INodeType {
                     {
                         name: '새로운 게시글 생성',
                         value: 'get',
-                        action: 'Append document',
+                        action: '새로운 게시글 생성',
                         description: '새로운 게시글을 생성합니다',
                         routing: {
                             request: {
@@ -94,6 +94,17 @@ export class ZioYouBoard implements INodeType {
                         value: 'get',
                         action: '확인라인 상태가 업데이트 되었을 때',
                         description: '게시글 안에 확인라인을 누군가 클릭해서 상태가 업데이트 되었을 때 이벤트를 수신합니다',
+                        routing: {
+                            request: {
+                                method: 'GET',
+                            },
+                        },
+                    },
+                    {
+                        name: '댓글이 신규로 작성되었을 때',
+                        value: 'get',
+                        action: '댓글이 신규로 작성되었을 때',
+                        description: '게시글 열람권한이 있는 사람이, 신규로 댓글이 작성되었을 때',
                         routing: {
                             request: {
                                 method: 'GET',

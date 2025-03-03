@@ -5,7 +5,7 @@ export class ZioYouBoard implements INodeType {
 		// Basic node details will go here
         displayName: 'ZioYou Board',
         name: 'zioYouBoard',
-        icon: 'file:ic_launcher.png',
+        icon: 'file:ic_launcher.svg',
         group: ['transform'],
         version: 1,
         subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',

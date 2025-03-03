@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-zioyouboard",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "지오유 그룹웨어 게시판을 사용하는 노드입니다.",
   "keywords": [
     "n8n-community-node-package"

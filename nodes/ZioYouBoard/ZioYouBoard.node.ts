@@ -17,7 +17,7 @@ export class ZioYouBoard implements INodeType {
         outputs: ['main'] as [NodeConnectionType],
         credentials: [
             {
-                name: 'ZioYouBoardApi',
+                name: 'zioYouBoardApi',
                 required: true,
             },
         ],

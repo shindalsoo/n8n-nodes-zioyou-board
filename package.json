@@ -1,19 +1,19 @@
 {
-  "name": "n8n-nodes-<...>",
-  "version": "0.1.0",
-  "description": "",
+  "name": "n8n-nodes-zioyouboard",
+  "version": "0.1.2",
+  "description": "지오유 그룹웨어 게시판을 사용하는 노드입니다.",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://help.zioyou.com",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "신달수",
+    "email": "shindalsoo@naver.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/shindalsoo/n8n-nodes-zioyou-board.git"
   },
   "engines": {
     "node": ">=18.10",
@@ -36,23 +36,23 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/ZioYouBoardApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/ZioYouBoard/ZioYouBoard.node.js"
     ]
   },
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.56.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
     "gulp": "^4.0.2",
-    "prettier": "^3.3.2",
-    "typescript": "^5.5.3"
+    "prettier": "^3.3.2"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
   }
 }

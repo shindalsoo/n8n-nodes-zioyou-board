@@ -1,47 +1,24 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# 시작하는 방법 (택1)
+- 선언적 스타일
+- 프로그래밍 스타일
 
-# 시작하는 방법
-# n8n-nodes-starter법
+## 주의 사항
+- n8n은 ts를 적용하여, 엄격하게 형식의 준수할 것을 요구합니다.
+- eslint를 사용하여, 오류가 있는지 작업과정에서 늘 체크하세요.
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](n8n.io). It includes the node linter and other dependencies.
+## 선언적 스타일
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+단계별로 따라하기 쉬운 매뉴얼입니다. [선언적 스타일 따라하기 매뉴얼](https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/#prerequisites).
 
-## Prerequisites
-
-You need the following installed on your development machine:
-
-* [git](https://git-scm.com/downloads)
-* Node.js and pnpm. Minimum version Node 18. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  pnpm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
-
-## Using this starter
-
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
-
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
+1. [새 저장소 생성](https://github.com/n8n-io/n8n-nodes-starter/generate) 이 템플릿 저장소에서 나의 github로 생성하세요.
+2. 새로운 repo를 복제하세요.:
    ```
    git clone https://github.com/<your organization>/<your-repo-name>.git
    ```
-3. Run `pnpm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `pnpm lint` to check for errors or `pnpm lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
-
-## More information
-
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
-
-## License
-
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+3. 종속성을 설치하기 위해 실행합니다. `pnpm i`
+4. vscode에서 프로젝트를 여세요.
+5. `/nodes` 폴더와 `/credentials` 두개의 폴더를 자신의 노드로 대체합니다.
+6. `package.json`을 나의 세부정보로 업데이트 하세요.
+7. `pnpm lint` 명령어를 실행하여, 오류를 확인하세요. `pnpm lintfix` 명령어는 오류를 자동으로 수정합니다.
+8. 로컬에서 노드를 테스트하세요. [로컬에서 노드 실행 매뉴얼](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/)
+11. 작업이 다 끝나셨다면 NPM 커뮤니티에 게시하세요. [npmjs.com에 게시](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)

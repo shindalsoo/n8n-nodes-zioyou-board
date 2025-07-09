@@ -1,10 +1,7 @@
-# 개요 및 사용설명
 # Gemini 음성 대화 어시스턴트
-
 이 프로젝트는 Gemini CLI와 음성을 통해 상호작용할 수 있도록 돕는 파이썬 스크립트입니다. 사용자의 음성 질문을 텍스트로 변환하여 Gemini CLI에 전달하고, Gemini CLI의 텍스트 응답을 다시 음성으로 변환하여 사용자에게 들려줍니다. 지속적인 대화가 가능하도록 구현되었습니다.
 
 ## 1. 프로젝트 개요
-
 이 스크립트는 **STT (Speech-to-Text)** 기능을 이용해 사용자의 음성 질문을 텍스트로 변환하고, 이 텍스트를 **Gemini CLI**로 전달합니다. Gemini CLI의 텍스트 응답은 다시 **TTS (Text-to-Speech)** 기능을 통해 음성으로 변환되어 사용자에게 들려집니다. `subprocess`와 `threading` 모듈을 활용하여 Gemini CLI 프로세스와 파이썬 스크립트가 병렬적으로 작동하도록 구현했습니다.
 
 ## 2. 주요 기능
@@ -32,7 +29,7 @@ PyAudio 설치시 오류 발생한다면 아래 명령어 실행
 sudo apt-get install portaudio19-dev python3-pyaudio
 ```
 
-### 4. 소스코드 (continuus_gemini_audio.py)
+## 4. 소스코드 (continuous_gemini_voice.py)
 ```python
 import speech_recognition as sr
 import subprocess
@@ -201,5 +198,14 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
-
+## 5. 사용 방법
+1. 위 코드를 .py 파일로 저장합니다 (예: continuous_gemini_voice.py)
+2. 터미널을 열고 저장된 파일이 있는 디렉토리로 이동합니다.
+3. 다음 명령어를 실행합니다.
+   ```python
+   python continuous_gemini_voice.py
+   ```
+4. "[말씀해주세요...]" 메시지가 나타나면 마이크에 대고 질문을 시작하세요.
+5. Gemini의 답변이 음성으로 들려올 것입니다.
+6. 대화를 종료하려면 "종료" 또는 "exit"라고 말하면 됩니다.
+   

@@ -24,8 +24,16 @@ Node.js와 npm이 설치되어 있어야 합니다.
 
 ```bash
 npm install -g @google/gemini-cli gemini
+```
+### 3.2. 파이썬 라이브러리 설치
+```bash
+pip install SpeechRecognition PyAudio gTTS playsound
+PyAudio 설치시 오류 발생한다면 아래 명령어 실행
+sudo apt-get install portaudio19-dev python3-pyaudio
+```
 
-
+### 4. 소스코드 (continuus_gemini_audio.py)
+```python
 import speech_recognition as sr
 import subprocess
 import shlex
@@ -192,3 +200,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
+
+

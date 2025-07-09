@@ -1,3 +1,31 @@
+# 개요 및 사용설명
+# Gemini 음성 대화 어시스턴트
+
+이 프로젝트는 Gemini CLI와 음성을 통해 상호작용할 수 있도록 돕는 파이썬 스크립트입니다. 사용자의 음성 질문을 텍스트로 변환하여 Gemini CLI에 전달하고, Gemini CLI의 텍스트 응답을 다시 음성으로 변환하여 사용자에게 들려줍니다. 지속적인 대화가 가능하도록 구현되었습니다.
+
+## 1. 프로젝트 개요
+
+이 스크립트는 **STT (Speech-to-Text)** 기능을 이용해 사용자의 음성 질문을 텍스트로 변환하고, 이 텍스트를 **Gemini CLI**로 전달합니다. Gemini CLI의 텍스트 응답은 다시 **TTS (Text-to-Speech)** 기능을 통해 음성으로 변환되어 사용자에게 들려집니다. `subprocess`와 `threading` 모듈을 활용하여 Gemini CLI 프로세스와 파이썬 스크립트가 병렬적으로 작동하도록 구현했습니다.
+
+## 2. 주요 기능
+
+* **음성 질문**: 마이크를 통해 Gemini에게 음성으로 질문할 수 있습니다.
+* **음성 응답**: Gemini의 텍스트 응답을 음성으로 들을 수 있습니다.
+* **지속적인 대화**: "종료" 또는 "exit"라고 말하기 전까지 계속해서 대화를 이어갈 수 있습니다.
+* **백그라운드 처리**: 음성 인식과 재생이 별도의 스레드에서 처리되어 원활한 사용자 경험을 제공합니다.
+
+## 3. 환경 설정 및 설치
+
+본 스크립트는 Ubuntu Desktop 24.04 환경에서 테스트되었습니다.
+
+### 3.1. Gemini CLI 설치
+
+Node.js와 npm이 설치되어 있어야 합니다.
+
+```bash
+npm install -g @google/gemini-cli gemini
+
+
 import speech_recognition as sr
 import subprocess
 import shlex
